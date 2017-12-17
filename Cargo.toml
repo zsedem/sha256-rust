@@ -1,0 +1,6 @@
+[package]
+name = "sha256sum"
+version = "0.1.0"
+authors = ["zsedem"]
+
+[dependencies]
