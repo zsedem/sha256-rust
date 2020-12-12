@@ -41,7 +41,7 @@ fn main() {
     }
 }
 
-fn calc_sha_sum(mut x: &File) -> Sha256State {
+fn calc_sha_sum(mut x: impl Read) -> Sha256State {
     let mut shasum = Sha256State { word_count: 0, m: [0; 64], hash: SHA256_INITIAL_CONST, bit_length: 0 };
     let mut buffer: [u8; CHUNK_SIZE] = [0; CHUNK_SIZE];
 
